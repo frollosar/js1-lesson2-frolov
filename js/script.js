@@ -1,77 +1,61 @@
-// Задание 1
+// Задание 1 // Запись числа в объект сотни-десятки-единицы
 
 function exerciseOne() {
     console.log("Задание 1");
-    let i = 0;
-    while (i <= 100) {
-        let d = 2;
-        let divied = false;
-        while (d < i) {
-            if (i % d === 0) {
-                divied = true;
-                break;
+    let i = prompt("Введите значение от 0 до 999");
+    function divide(k) {
+        parseInt(k);
+        let division;
+        if(k > 999 || k < 0){
+            console.log("Число превышает 999: ");
+            return division = {};
+        }
+        let x = (k - k % 100) / 100; // сотни
+        let y = (k % 100 - k % 10) / 10; // десятки
+        let z = k % 10; // единицы
+        return division = {"сотни" : x, "десятки" : y, "единицы" : z};
             }
-            d++;
-        }
-        if (!divied) {
-            console.log(i);
-        }
-        i++;
-    }
+    let result = divide(i);
+
+    console.log(result);
 }
 
 exerciseOne();
+
+console.log("");
 
 //Задание 2
 
 function exerciseTwo() {
     console.log("Задание 2");
-    console.log("0 - это ноль");
-    let i = 1;
-    do {
-        if (i % 2 === 0)
-            console.log(i + " - это четное число");
-        else
-            console.log(i + " - это нечетное число");
-        i++;
-    } while (i <= 10)
+
+    let goods={
+        1 :{name: 'Товар 1',  cost: 100, description: 'Крутой товар'},
+        2: {name: 'Товар 2',  cost: 150, description: 'Крутой товар 2'}
+    };
+
+    let basket=[
+        {good_id: 1, count: 2},
+        {good_id: 2, count: 1},
+    ];
+
+    let getBasketPrice=function(){
+        let _bsk = basket.slice();
+        let item, sum=0;
+        console.log("Товары в корзине: ");
+
+        while (item=_bsk.shift()){
+            let good = goods[item.good_id];
+
+            console.log(good.name+" стоимостью "+good.cost+"р. - "+item.count+" шт.");
+            sum+= good.cost * item.count
+        }
+
+
+        return sum;
+    };
+
+    console.log("Итого: "+getBasketPrice()+"р.");
 }
 
 exerciseTwo();
-
-//Задание 3
-
-function exerciseTree() {
-    console.log("Задание 3");
-    for(let i = 0; i<=9; console.log(i++)){}
-}
-
-exerciseTree();
-
-//Задание 5
-
-
-//Задание 6
-
-/*
-
-let exercise = prompt("Введите номер задания: 1, 2, 3, 4"); //спрашивает какую операцию провести
-
-switch (exercise) { //Выводит результат в зависимости от запрашиваемой операции
-    case 1:
-        console.log(exerciseOne());
-        break;
-    case 2:
-        console.log(exercise2());
-        break;
-    case 3:
-        console.log(exercise3());
-        break;
-    case 4:
-        console.log(exercise4());
-        break;
-    default :
-        console.log("Введите значение из списка")
-}
-
-*/
