@@ -2,36 +2,14 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Базовый курс JavaScript. Урок 6</title>
-		<style>
-			.slider_pics img {
-				width: 20%;
-				height: auto;
-				cursor: pointer;
-			}
-		</style>
+        <title>Урок 7. Змейка</title>
+        <link rel="stylesheet" href="css/style.css">
 	</head>
-	<body style="text-align:center; max-width: 509px; margin: 0 auto; padding: 0 25px;">
-		<p><img src="img/jslogo.jpg" style="width:100%; height:auto;" id="big_picture" />
-			<img src="img/leftarrow.png" style="" id="leftArrow" />
-			<img src="img/rightarrow.png" style="" id="rightArrow" />
-		</p>
-		<div class="slider_pics">
-			<img src="img/jslogo.jpg">
-			<img src="img/jslogo2.png">
-			<img src="img/jslogo3.png">
-			<img src="img/jslogo4.png">
-		</div>
-		<p onclick="alert('Clicked'); console.log('test');">Событие клик внутри html 1 вариант</p>
-		<p class="willBeClicked">Событие клик внутри html 2 вариант</p>
-		<p class="testInClick">Переопределение события onclick для willBeClicked</p>
-		<p class="btext btext2">Язык JavaScript является основным языком программирования в сети Интернет. Перво-наперво он позволяет расширять стандартное поведение пользователя в веб-страницах. Вместо сухих статичных страниц, которые просто <a href="http://yandex.ru">показываются</a> пользователю <em>друг за другом</em>, с JavaScript <b>страница будет</b> взаимодействовать с пользователями, откликаться на его действия, получать и применять данные из Интернет и делать многое другое. </p>
-		<ul style="text-align:left;">
-			<li>Элемент 1</li>
-			<li>Элемент 2</li>
-			<li>Элемент 3</li>
-		</ul>
-		<div id="ForAppend"></div>
-		<script src="js/scripts.js"></script>
+	<body>
+        <div id="snake_score">0</div>
+        <div id="snake_field"></div>
+        <div id="snake_start">Старт</div>
+        <div id="snake_renew">Новая игра</div>
+        <script src="js/scripts.js"></script>
 	</body>
 </html>
